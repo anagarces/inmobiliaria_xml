@@ -1,0 +1,30 @@
+# ---- Credenciales y entorno (NUNCA subir a GitHub) ----
+.env
+.env.*
+!.env.example
+config/odoo.conf
+!config/odoo.conf.example
+*.pem
+*.key
+
+# ---- Datos persistentes de Docker ----
+data/
+postgresql/
+filestore/
+sessions/
+backups/
+
+# ---- Odoo ----
+*.pyc
+__pycache__/
+*.pyo
+*.swp
+.~lock.*
+*.log
+
+# ---- Editores / SO ----
+.idea/
+.vscode/
+*.sublime-*
+.DS_Store
+Thumbs.db

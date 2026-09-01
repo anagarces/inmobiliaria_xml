@@ -1,0 +1,34 @@
+[options]
+; ============================================================
+;  Plantilla de configuracion de Odoo
+;  Copia a config/odoo.conf y ajusta los valores.
+;  config/odoo.conf esta en .gitignore (contiene secretos).
+; ============================================================
+
+; --- Seguridad ---
+; Contrasena maestra para gestionar bases de datos (debe coincidir
+; con ODOO_MASTER_PASSWORD del .env si usas el entrypoint por env).
+admin_passwd = cambia_esta_password_maestra_de_odoo
+
+; --- Conexion a la base de datos ---
+db_host = db
+db_port = 5432
+db_user = odoo
+db_password = cambia_esta_password_de_postgres
+; Evita que se listen/creen bases arbitrarias en produccion
+db_maxconn = 64
+list_db = True
+
+; --- Rutas ---
+addons_path = /mnt/extra-addons
+data_dir = /var/lib/odoo
+
+; --- Red / workers ---
+; 0 = modo multihilo (ideal para desarrollo).
+; En produccion: workers = 2 * nucleos + 1
+workers = 0
+proxy_mode = False
+
+; --- Logs ---
+log_level = info
+logfile = False
