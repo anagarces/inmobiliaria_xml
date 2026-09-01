@@ -24,6 +24,9 @@ addons_path = /mnt/extra-addons
 data_dir = /var/lib/odoo
 
 ; --- Red / workers ---
+http_interface = 0.0.0.0
+http_port = 8069
+gevent_port = 8072
 ; 0 = modo multihilo (ideal para desarrollo).
 ; En produccion: workers = 2 * nucleos + 1
 workers = 0
@@ -31,4 +34,5 @@ proxy_mode = False
 
 ; --- Logs ---
 log_level = info
-logfile = False
+; logfile vacio -> log a stdout (visible con: docker compose logs -f odoo)
+logfile =
