@@ -33,6 +33,7 @@
                         <field name="x_garden"/>
                         <field name="x_garden_area"/>
                         <field name="x_garden_orientation"/>
+                        <field name="x_property_tag_ids" widget="many2many_tags"/>
                     </group>
                     <notebook>
                         <page string="Description">
